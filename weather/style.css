@@ -1,0 +1,144 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: var(--bg-color);
+    transition: background 1s ease;
+    overflow: hidden;
+}
+
+/* Light and Dark Mode Theme Variables */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: #fff;
+    --button-bg: #4facfe;
+    --button-hover: #00c6ff;
+}
+
+.dark-mode {
+    --bg-color: #1e1e2f;
+    --text-color: #e0e0e0;
+    --container-bg: #2a2a3d;
+    --button-bg: #ff7300;
+    --button-hover: #ff5200;
+}
+
+/* Canvas for Gradient and Particle Animation */
+#gradient-bg,
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    background-color: var(--container-bg);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    transition: background 0.5s ease-in-out;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: var(--text-color);
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Button */
+button {
+    padding: 10px 15px;
+    background-color: var(--button-bg);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Dark/Light Mode Toggle */
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+#toggleMode {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#toggleMode:hover {
+    background-color: var(--button-hover);
+}
+
+/* Weather Result */
+#loading {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+#weather-result {
+    margin-top: 15px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
